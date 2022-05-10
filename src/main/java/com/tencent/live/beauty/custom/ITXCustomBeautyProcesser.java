@@ -4,11 +4,11 @@ import static com.tencent.live.beauty.custom.TXCustomBeautyDef.TXCustomBeautyBuf
 import static com.tencent.live.beauty.custom.TXCustomBeautyDef.TXCustomBeautyPixelFormat;
 import static com.tencent.live.beauty.custom.TXCustomBeautyDef.TXCustomBeautyVideoFrame;
 
-public interface ITXCustomBeautyProcess {
+public interface ITXCustomBeautyProcesser {
 
-    TXCustomBeautyPixelFormat getPixelFormat();
+    TXCustomBeautyPixelFormat getSupportedPixelFormat();
 
-    TXCustomBeautyBufferType getBufferType();
+    TXCustomBeautyBufferType getSupportedBufferType();
 
     void onProcessVideoFrame(TXCustomBeautyVideoFrame srcFrame, TXCustomBeautyVideoFrame dstFrame);
 }
